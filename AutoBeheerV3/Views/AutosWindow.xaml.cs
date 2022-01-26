@@ -64,5 +64,12 @@ namespace AutoBeheerV3.Views
                 autoWindow.ShowDialog();
             } 
         }
+
+        private void btnEigenaar_Click(object sender, RoutedEventArgs e)
+        {
+            EigenarenWindow eigenaren = new EigenarenWindow();
+
+            eigenaren.ShowDialog();
+        }
     }
 }

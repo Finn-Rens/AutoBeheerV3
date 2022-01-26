@@ -78,6 +78,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\AutoController.cs" />
+    <Compile Include="Controllers\EigenaarController.cs" />
     <Compile Include="Views\DecimalToTextConverter.cs" />
     <Compile Include="Views\DecimalValidationRule.cs" />
     <Compile Include="Data\AutoBeheer.designer.cs">
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="Views\AutoWindow.xaml.cs">
       <DependentUpon>AutoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EigenaarWindow.xaml.cs">
+      <DependentUpon>EigenaarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EigenarenWindow.xaml.cs">
+      <DependentUpon>EigenarenWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -135,6 +142,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AutoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EigenaarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EigenarenWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

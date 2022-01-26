@@ -1,0 +1,16 @@
+﻿<Window x:Class="AutoBeheerV3.Views.EigenaarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoBeheerV3.Views"
+        mc:Ignorable="d"
+        Title="EigenaarWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="91,84,0,0" TextWrapping="Wrap" Text="Eigenaar:" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="txtEigenaar" Text="{Binding Naam}" HorizontalAlignment="Left" Height="23" Margin="153,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" Margin="153,129,0,0" VerticalAlignment="Top" Width="120" Click="btnOpslaan_Click"/>
+        <Button x:Name="btnSluiten" Content="Sluiten" HorizontalAlignment="Left" Margin="304,129,0,0" VerticalAlignment="Top" Width="120" Click="btnSluiten_Click"/>
+
+    </Grid>
+</Window>
