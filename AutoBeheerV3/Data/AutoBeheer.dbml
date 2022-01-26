@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AutoBeheer" Class="AutoBeheerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoBeheer.mdf;Integrated Security=True" SettingsObjectName="AutoBeheerV3.Properties.Settings" SettingsPropertyName="AutoBeheerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Auto" Member="Autos">
+    <Type Name="Auto">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Kenteken" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Prijs" Type="System.Decimal" DbType="Decimal(7,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Merk" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Bouwjaar" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EigenaarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Eigenaar_Auto" Member="Eigenaar" ThisKey="EigenaarId" OtherKey="Id" Type="Eigenaar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Eigenaar" Member="Eigenaars">
+    <Type Name="Eigenaar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Eigenaar_Auto" Member="Autos" ThisKey="Id" OtherKey="EigenaarId" Type="Auto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gebruiker" Member="Gebruikers">
+    <Type Name="Gebruiker">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Wachtwoord" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

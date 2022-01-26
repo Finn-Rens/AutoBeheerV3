@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AutoBeheer">
+  <DataContextMoniker Name="/AutoBeheerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="70940072-f14d-4ab5-b2a6-fd7ccaa09a3a" absoluteBounds="1.75, 1.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/AutoBeheerDataContext/Auto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0fd3051-1893-4190-836a-1ccbab0ff7ac" absoluteBounds="1.7650000000000001, 2.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e96c1f1-962f-4a37-87f3-7014dee87ffb" absoluteBounds="5.125, 1.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/AutoBeheerDataContext/Eigenaar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcdba0a2-49b4-4e30-ab0f-cdbae06b76ba" absoluteBounds="5.14, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 2.34699625651042); (3.75 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AutoBeheerDataContext/Eigenaar/Eigenaar_Auto" />
+      <nodes>
+        <classShapeMoniker Id="5e96c1f1-962f-4a37-87f3-7014dee87ffb" />
+        <classShapeMoniker Id="70940072-f14d-4ab5-b2a6-fd7ccaa09a3a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8f39ab64-83ca-418d-be9f-04a1bda872e9" absoluteBounds="5.125, 3.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AutoBeheerDataContext/Gebruiker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b06ebd27-9a66-4c84-a6e8-7a89be27bf31" absoluteBounds="5.14, 3.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
