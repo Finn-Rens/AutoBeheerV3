@@ -23,5 +23,14 @@ namespace AutoBeheerV3.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AutosWindow autosWindow = new AutosWindow();
+
+            autosWindow.Show();
+
+            this.Close();
+        }
     }
 }
