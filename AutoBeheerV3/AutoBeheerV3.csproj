@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\EigenaarController.cs" />
+    <Compile Include="Controllers\GebruikerController.cs" />
     <Compile Include="Views\DecimalToTextConverter.cs" />
     <Compile Include="Views\DecimalValidationRule.cs" />
     <Compile Include="Data\AutoBeheer.designer.cs">

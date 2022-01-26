@@ -25,13 +25,17 @@ namespace AutoBeheerV3.Views
 
         private Auto _auto;
 
-        public AutoWindow(AutoController autoController, Auto auto)
+        private EigenaarController _eigenaarController;
+
+        public AutoWindow(AutoController autoController, EigenaarController eigenaarController, Auto auto)
         {
             InitializeComponent();
 
             _autoController = autoController;
 
             _auto = auto;
+
+            _eigenaarController = eigenaarController;
 
             this.DataContext = _auto;
         }
@@ -68,12 +72,30 @@ namespace AutoBeheerV3.Views
 
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+                if (_auto.Id == 0)
+                {
+                    _autoController.NieuwAuto(_auto);
+                }
+                else
+                {
+                    _autoController.WijzigAuto(_auto);
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show($"Er is een fout opgetreden {_auto.Kenteken} ");
+            }
+
+            this.Close();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //cbEigenaar.ItemsSource = _eigenaarController.Eigenaars;
+            cbEigenaar.ItemsSource = _eigenaarController.Eigenaars;
         }
+
     }
 }

@@ -24,14 +24,20 @@ namespace AutoBeheerV3.Views
     public partial class AutosWindow : Window
     {
         private AutoController autoController;
-        
+
+        private EigenaarController eigenaarController;
+
         public AutosWindow()
         {
             InitializeComponent();
 
             autoController = new AutoController();
 
+            eigenaarController = new EigenaarController();
+
             dgAutos.ItemsSource = autoController.Autos;
+
+            IPrincipal principal = Thread.CurrentPrincipal;
         }
 
         
@@ -42,7 +48,7 @@ namespace AutoBeheerV3.Views
             auto.Bouwjaar = DateTime.Now;
             auto.Prijs = 0;
 
-            AutoWindow autoWindow = new AutoWindow(autoController, auto);
+            AutoWindow autoWindow = new AutoWindow(autoController, eigenaarController, auto);
 
             autoWindow.ShowDialog();
         }
@@ -59,7 +65,7 @@ namespace AutoBeheerV3.Views
         {
             if (dgAutos.SelectedItem != null) 
             {
-                AutoWindow autoWindow = new AutoWindow(autoController, (Auto)dgAutos.SelectedItem);
+                AutoWindow autoWindow = new AutoWindow(autoController, eigenaarController, (Auto)dgAutos.SelectedItem);
 
                 autoWindow.ShowDialog();
             } 
@@ -67,9 +73,9 @@ namespace AutoBeheerV3.Views
 
         private void btnEigenaar_Click(object sender, RoutedEventArgs e)
         {
-            EigenarenWindow eigenaren = new EigenarenWindow();
+            EigenarenWindow eigenarenWindow = new EigenarenWindow();
 
-            eigenaren.ShowDialog();
+            eigenarenWindow.ShowDialog();
         }
     }
 }
